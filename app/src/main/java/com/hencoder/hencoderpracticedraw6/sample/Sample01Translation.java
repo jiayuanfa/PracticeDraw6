@@ -44,6 +44,7 @@ public class Sample01Translation extends RelativeLayout {
 
         animateBt = (Button) findViewById(R.id.animateBt);
         imageView = (ImageView) findViewById(R.id.imageView);
+
         if (SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
             // 给音乐图标加上合适的阴影
             imageView.setOutlineProvider(new MusicOutlineProvider());
@@ -90,7 +91,6 @@ public class Sample01Translation extends RelativeLayout {
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     class MusicOutlineProvider extends ViewOutlineProvider {
         Path path = new Path();
-
         {
             path.moveTo(0, dpToPixel(10));
             path.lineTo(dpToPixel(7), dpToPixel(2));
